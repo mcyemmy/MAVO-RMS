@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>RMS - Resource Management System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<script src="js/jquery-3.1.1.min.js"></script>        
+<script src="js/bootstrap-3.3.7.min.js"></script>       
+<script src="js/mavo.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap-3.3.7.min.css">
+<link rel="stylesheet" href="css/mavo.css">
+<link rel="stylesheet" href="css/custom.min.css">
+<!--<script src="https://get.mavo.io/mavo.js"></script>
+<link rel="stylesheet" href="https://get.mavo.io/mavo.css">-->
+    </head>
+    <body mv-app="rms" mv-storage="local">
+       <header>
+            <div class="container">
+                <div class="row"> 
+                    <div class="col-xs-12">
+      <h1>
+        <span>R</span><span>M</span><span>S</span>
+      </h1>                      
+      <hr><hr><hr><hr><hr>    
+      <p class="pull-right">Resource Management System</p>
+</div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+    <ul class="nav nav-pills nav-stacked col-xs-12 col-md-2">
+        <li class="active">
+            <a href="#resource" data-toggle="tab" property="url">
+                <span property="navTitle">Resource</span>
+            </a>
+        </li>        
+        
+        <li>
+            <a h`ref="#projects" data-toggle="tab" property="url">
+                <span property="navTitle">Projects</span>
+            </a>
+        </li>    
+        <li>
+            <a href="#recognition" data-toggle="tab" property="url">
+                <span property="navTitle">Recognition</span>
+            </a>
+        </li>
+        <li>
+            <a href="#initiatives" data-toggle="tab" property="url">
+                <span property="navTitle">Initiatives</span>
+            </a>
+        </li>
+        <li property="mainNav" mv-multiple>
+            <a href="#about" data-toggle="tab" property="url">
+                <span property="navTitle">About</span>
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content col-xs-12 col-md-10">
+        <section class="tab-pane active" id="resource">
+            
+<h2>Resource Profile</h2>
+<p class="hidden">Tab 1 - Resource profile - Box with resource picture, profile, skill set and current project.</p>
+<div class="content">
+    <summary>What is everyone working on and who is available for the next project? In the color bar below, red bar indicates resource is not on a project(on Bench), green indicates currently on a project, while black indicates there is no status reported on the resource</summary>
+    <div class="profile" property="resourceProfile" mv-multiple>
+       <img src="images/yemi.png" alt="Profile Picture" class="center-block" property="resourcePicture">
+       <p>
+           <b>Name:</b>
+           <span property="resourceName">Yemi O.</span>
+       </p>  
+       <p>
+           <b>Skills/Expertise:</b>
+           <span property="resourceSkillset">Frontend, Mavo, HTML, CSS, Javascript</span>
+       </p> 
+       <p>
+           <b>Current Project:</b>
+           <span property="resourceProject">Resource Management System</span>
+       </p> 
+       <p>
+           <b>Projected availability:</b>
+           <span property="resourceAvailability">6/28/2017</span>
+       </p> 
+        <p>
+            <b>Status mode:</b>          
+                        
+            <meter class="[status]" property="resourceStatus" min="0" max="0"></meter>
+           tooltip (on a project)
+            <br>
+            <input type="radio" name="status" property="status" value="project"> On a Project<br>
+            <input type="radio" name="status" property="status" value="bench"> On the Bench<br>
+            <input type="radio" name="status" property="status" value="nostat"> No Status Reported<br><br>
+            
+            
+            <!--
+            <meter class="[if(status2=='bench', bench, project)]" property="resourceStatus" min="0" max="0"></meter>
+           tooltip (on a project)
+            <br>
+            <input type="radio" name="status" property="status1" value="project"> On a Project<br>
+            <input type="radio" name="status" property="status2" value="bench"> On the Bench<br>
+            <input type="radio" name="status" property="status3" value="nostat"> No Status Reported<br><br>-->
+       </p>       
+    </div>
+</div>
+        </section>
+        <section class="tab-pane" id="projects">
+            <h2>Current/Active Projects</h2>
+<p class="hidden">Tab 2 - Active Projects - Box list of project titles and description, with assigned resources names underneath</p>
+<div class="content">
+   <summary>Determine which projects are ongoing, pending and have ended. Also identify if there are resource need for any project. In the color bar below - Green indicates active projects, red indicates project has ended, Orange shows Pending and black means no status reported yet.</summary>
+    Title:
+    Client:
+    Start date:
+    Projected end date:
+    Resource needed: Is any additional resource needed?
+    Lead Resource:
+    POC contact info:
+    Status mode: color bar
+    Remarks:
+</div>
+        </section>
+        <section class="tab-pane" id="recognition">
+            <h2>Recognition</h2>
+<p class="hidden">Tab 3 - Box showing resources who went above and beyond and were recognized by the client
+</p>
+<div class="content">
+   <summary>Who are the resources who went above and beyond, and were recognized by the client for their work?</summary>
+    Picture:
+    Name:
+    Area of Specialization: Backend, Sitecore, Microsoft Azure
+    Current Project:
+    Projected availability:
+</div>
+        </section>
+        <section class="tab-pane" id="initiatives">
+            <h2>Internal Initiatives</h2>
+<p class="hidden">Tab 4 - Initiatives - Wide boxes with header and body showing internal projects that are being proposed for Benchers</p>
+<div class="content">   
+    <summary>Identify creative and marketable ideas that bench developers can work on as part of internal projects.</summary>
+    
+</div>
+        </section>
+        <section class="tab-pane" id="about">
+            <h2>About RMS</h2>
+<p class="hidden">Tab 5 - About RMS - Highlight facts about the development of RMS.</p>
+<div class="content">
+   <summary>Why and how this project was developed</summary>
+        <div class="about">
+            <p property="aboutRms">
+                This Resource management System is a web portal system that lets you manage resource, projects and Creative Ideas. While this application could be of great benefit to the company, the excitement about it comes mainly from the fact that it was developed using a newly released Javascript framework(MAVO) that lets you write less code and develop reactive web applications in a shorter time span. But above all, it lets end clients easily update and manage their website content from the browser (right on the webpage) similar to Content Management Systems(CMS) but with less effort. You can add components, duplicate components, delete components, store data locally in the browser or to a well supported data storage location like Github or Dropbox. 
+                <a href="https://0xdeadfa11.blogspot.com/2017/05/mavoio-turn-static-html-into-reactive.html" target="_blank">More on MAVO</a>
+            </p>            
+        </div>
+</div>
+        </section>
+    </div>
+</div>                
+                </div>
+            </div>
+        </main> 
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">                      
+      <hr><hr><hr><hr><hr>
+      <p>
+          &copy; Resource Management System, 2017.
+      </p>
+</div>                
+                </div>
+            </div>
+        </footer>      
+    </body>
+</html>

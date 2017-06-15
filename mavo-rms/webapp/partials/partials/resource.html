@@ -1,0 +1,44 @@
+
+<h2>Resource Profile</h2>
+<p class="hidden">Tab 1 - Resource profile - Box with resource picture, profile, skill set and current project.</p>
+<div class="content">
+    <summary>What is everyone working on and who is available for the next project? In the color bar below, red bar indicates resource is not on a project(on Bench), green indicates currently on a project, while black indicates there is no status reported on the resource</summary>
+    <div class="profile" property="resourceProfile" mv-multiple>
+       <img src="images/yemi.png" alt="Profile Picture" class="center-block" property="resourcePicture">
+       <p>
+           <b>Name:</b>
+           <span property="resourceName">Yemi O.</span>
+       </p>  
+       <p>
+           <b>Skills/Expertise:</b>
+           <span property="resourceSkillset">Frontend, Mavo, HTML, CSS, Javascript</span>
+       </p> 
+       <p>
+           <b>Current Project:</b>
+           <span property="resourceProject">Resource Management System</span>
+       </p> 
+       <p>
+           <b>Projected availability:</b>
+           <span property="resourceAvailability">6/28/2017</span>
+       </p> 
+        <p>
+            <b>Status mode:</b>          
+                        
+            <meter class="[status]" property="resourceStatus" min="0" max="0"></meter>
+           tooltip (on a project)
+            <br>
+            <input type="radio" name="status" property="status" value="project"> On a Project<br>
+            <input type="radio" name="status" property="status" value="bench"> On the Bench<br>
+            <input type="radio" name="status" property="status" value="nostat"> No Status Reported<br><br>
+            
+            
+            <!--
+            <meter class="[if(status2=='bench', bench, project)]" property="resourceStatus" min="0" max="0"></meter>
+           tooltip (on a project)
+            <br>
+            <input type="radio" name="status" property="status1" value="project"> On a Project<br>
+            <input type="radio" name="status" property="status2" value="bench"> On the Bench<br>
+            <input type="radio" name="status" property="status3" value="nostat"> No Status Reported<br><br>-->
+       </p>       
+    </div>
+</div>

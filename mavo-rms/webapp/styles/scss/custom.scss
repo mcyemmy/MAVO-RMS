@@ -1,0 +1,171 @@
+/* === Header === */
+main {
+    margin: 30px 0;
+}
+
+/* === Header === */
+
+header {
+    
+    hr {
+        display: inline-block;
+        width: 20%;  
+        height: 10px;
+        margin: 0;
+
+        &:nth-child(2) {
+            background: #f6303f;
+        }
+        &:nth-child(3) {
+            background: #24cbd3;     
+        }
+        &:nth-child(4) {
+            background: #fad13e;       
+        }
+        &:nth-child(5) {
+            background: #00c189;       
+        }
+        &:nth-child(6) {
+            background: #b317ac;       
+        }
+    }
+    
+    h1 {
+        letter-spacing: 30px;
+        color: #002c73;
+        text-shadow: 1px 2px #ccc;
+        font-weight: bold;
+        margin: 0;
+        
+        span:nth-child(1) {
+            font-size: 76px;
+        }
+        span:nth-child(2) {
+            font-size: 56px;
+        }
+        span:nth-child(3) {
+            font-size: 76px;
+        }
+    }
+    
+}
+
+/* === Header === */
+
+footer {
+    
+    hr {
+        display: inline-block;
+        width: 20%;  
+        height: 2px;
+        margin: 0;
+
+        &:nth-child(1) {
+            background: #f6303f;
+        }
+        &:nth-child(2) {
+            background: #24cbd3;     
+        }
+        &:nth-child(3) {
+            background: #fad13e;       
+        }
+        &:nth-child(4) {
+            background: #00c189;       
+        }
+        &:nth-child(5) {
+            background: #b317ac;       
+        }
+    }
+    
+    p {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+
+/* === Main Container & Tab Content === */
+.tab-content {
+    
+}
+
+/* === Sections === */
+.content {
+    border: 1px solid #002c73;
+    border-right: 0;
+    padding: 20px;
+    min-height: 300px;
+    position: relative;
+}
+
+/* === Resource Sections === */
+.profile {
+    width: 40%;
+    display: inline-block;
+    border: 1px solid #00c189;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 16px;
+    margin-left: 40px;
+    box-shadow: 0px 0px 10px #ccc;
+    
+    img {
+        border: 2px dashed #ccc;
+        border-radius: 50%;
+        width: 180px;
+        height: 180px;
+        margin-bottom: 5px;
+    }
+    p {
+        width: 320px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    b {
+        color: #00c189;
+    }
+    span {
+        word-wrap: none;
+    }
+    .project::-webkit-meter-bar {
+        background: #0f0;
+        border: 1px solid #CCC;
+    }
+    .project::-moz-meter-bar {
+        background: #0f0;
+        border: 1px solid #CCC;
+    }
+    .bench::-webkit-meter-bar {
+        background: #f00;
+        border: 1px solid #CCC;
+    }
+    .bench::-moz-meter-bar {
+        background: #f00;
+        border: 1px solid #CCC;
+    }
+    .nostat {
+        visibility: hidden;
+        &:before {
+            content:"No Status Reported yet";
+        }
+    }
+}
+
+
+/* === Mavo  === */
+[property][mv-mode="edit"]:not([typeof]):not([mv-group]) input.mv-editor, [property][mv-mode="edit"]:not([typeof]):not([mv-group]) select.mv-editor, [property][mv-mode="edit"]:not([typeof]):not([mv-group]) textarea.mv-editor {
+    width: 22px;
+    padding: 0px 10px;
+}
+.mv-bar.mv-ui {
+    //display: none !important;
+}
+[mv-app] button.mv-add {
+    margin: 7px;
+}
+[mv-app] .content button.mv-add {
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+}
